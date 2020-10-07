@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C1B3ABA252D62EB001E2ADC /* GithubUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B3AB9252D62EB001E2ADC /* GithubUser.m */; };
 		4C1B3ABF252DAC0A001E2ADC /* GithubUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B3ABE252DAC0A001E2ADC /* GithubUserCell.m */; };
+		4C7282D1252DC4FA007B945C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7282D0252DC4FA007B945C /* SecondViewController.m */; };
 		4CD786CF252C5F64007011E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD786CE252C5F64007011E3 /* AppDelegate.m */; };
 		4CD786D2252C5F64007011E3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD786D1252C5F64007011E3 /* SceneDelegate.m */; };
 		4CD786D5252C5F64007011E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD786D4252C5F64007011E3 /* ViewController.m */; };
@@ -42,6 +43,8 @@
 		4C1B3AB9252D62EB001E2ADC /* GithubUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GithubUser.m; sourceTree = "<group>"; };
 		4C1B3ABD252DAC0A001E2ADC /* GithubUserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GithubUserCell.h; sourceTree = "<group>"; };
 		4C1B3ABE252DAC0A001E2ADC /* GithubUserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GithubUserCell.m; sourceTree = "<group>"; };
+		4C7282CF252DC4FA007B945C /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		4C7282D0252DC4FA007B945C /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		4CD786CA252C5F64007011E3 /* Github List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD786CD252C5F64007011E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4CD786CE252C5F64007011E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				4CD786DF252C5F65007011E3 /* main.m */,
 				4C1B3AB8252D62EB001E2ADC /* GithubUser.h */,
 				4C1B3AB9252D62EB001E2ADC /* GithubUser.m */,
+				4C7282CF252DC4FA007B945C /* SecondViewController.h */,
+				4C7282D0252DC4FA007B945C /* SecondViewController.m */,
 			);
 			path = "Github List";
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				4CD786D5252C5F64007011E3 /* ViewController.m in Sources */,
 				4C1B3ABF252DAC0A001E2ADC /* GithubUserCell.m in Sources */,
 				4CD786CF252C5F64007011E3 /* AppDelegate.m in Sources */,
+				4C7282D1252DC4FA007B945C /* SecondViewController.m in Sources */,
 				4CD786E0252C5F65007011E3 /* main.m in Sources */,
 				4C1B3ABA252D62EB001E2ADC /* GithubUser.m in Sources */,
 				4CD786D2252C5F64007011E3 /* SceneDelegate.m in Sources */,

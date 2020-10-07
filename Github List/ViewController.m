@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "GithubUser.h"
 #import "GithubUserCell.h"
+#import "SecondViewController.h"
 
 @interface ViewController ()
 
@@ -63,6 +64,19 @@ NSMutableArray<GithubUser *> *githubUsers;
     NSData *image = [NSData dataWithContentsOfURL:[githubUsers objectAtIndex:indexPath.row].avatarUrl];
     cell.imageView.image = [UIImage imageWithData:image];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    NSNumber *aaaa = [NSNumber numberWithInteger:indexPath.row];
+    [self performSegueWithIdentifier:@"GotoNextPage" sender:aaaa];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"GotoNextPage"]) {
+        NSLog(@"Ready to show data from row %@", sender);
+        SecondViewController *secondVC = (SecondViewController *)segue.destinationViewController;
+        
+    }
 }
 
 @end
