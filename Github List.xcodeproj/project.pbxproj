@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C1B3ABA252D62EB001E2ADC /* GithubUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B3AB9252D62EB001E2ADC /* GithubUser.m */; };
+		4C1B3ABF252DAC0A001E2ADC /* GithubUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B3ABE252DAC0A001E2ADC /* GithubUserCell.m */; };
 		4CD786CF252C5F64007011E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD786CE252C5F64007011E3 /* AppDelegate.m */; };
 		4CD786D2252C5F64007011E3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD786D1252C5F64007011E3 /* SceneDelegate.m */; };
 		4CD786D5252C5F64007011E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD786D4252C5F64007011E3 /* ViewController.m */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C1B3AB8252D62EB001E2ADC /* GithubUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GithubUser.h; sourceTree = "<group>"; };
+		4C1B3AB9252D62EB001E2ADC /* GithubUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GithubUser.m; sourceTree = "<group>"; };
+		4C1B3ABD252DAC0A001E2ADC /* GithubUserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GithubUserCell.h; sourceTree = "<group>"; };
+		4C1B3ABE252DAC0A001E2ADC /* GithubUserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GithubUserCell.m; sourceTree = "<group>"; };
 		4CD786CA252C5F64007011E3 /* Github List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD786CD252C5F64007011E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4CD786CE252C5F64007011E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C1B3ABC252DABDA001E2ADC /* GithubUserCell */ = {
+			isa = PBXGroup;
+			children = (
+				4C1B3ABD252DAC0A001E2ADC /* GithubUserCell.h */,
+				4C1B3ABE252DAC0A001E2ADC /* GithubUserCell.m */,
+			);
+			path = GithubUserCell;
+			sourceTree = "<group>";
+		};
 		4CD786C1252C5F64007011E3 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +119,7 @@
 		4CD786CC252C5F64007011E3 /* Github List */ = {
 			isa = PBXGroup;
 			children = (
+				4C1B3ABC252DABDA001E2ADC /* GithubUserCell */,
 				4CD786CD252C5F64007011E3 /* AppDelegate.h */,
 				4CD786CE252C5F64007011E3 /* AppDelegate.m */,
 				4CD786D0252C5F64007011E3 /* SceneDelegate.h */,
@@ -115,6 +131,8 @@
 				4CD786DB252C5F65007011E3 /* LaunchScreen.storyboard */,
 				4CD786DE252C5F65007011E3 /* Info.plist */,
 				4CD786DF252C5F65007011E3 /* main.m */,
+				4C1B3AB8252D62EB001E2ADC /* GithubUser.h */,
+				4C1B3AB9252D62EB001E2ADC /* GithubUser.m */,
 			);
 			path = "Github List";
 			sourceTree = "<group>";
@@ -268,8 +286,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD786D5252C5F64007011E3 /* ViewController.m in Sources */,
+				4C1B3ABF252DAC0A001E2ADC /* GithubUserCell.m in Sources */,
 				4CD786CF252C5F64007011E3 /* AppDelegate.m in Sources */,
 				4CD786E0252C5F65007011E3 /* main.m in Sources */,
+				4C1B3ABA252D62EB001E2ADC /* GithubUser.m in Sources */,
 				4CD786D2252C5F64007011E3 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
