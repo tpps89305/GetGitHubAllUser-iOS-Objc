@@ -99,6 +99,27 @@
 			path = GithubUserCell;
 			sourceTree = "<group>";
 		};
+		4C99928E252EA2D700D1C09F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4CD786D3252C5F64007011E3 /* ViewController.h */,
+				4CD786D4252C5F64007011E3 /* ViewController.m */,
+				4CD786D6252C5F64007011E3 /* Main.storyboard */,
+				4C7282CF252DC4FA007B945C /* SecondViewController.h */,
+				4C7282D0252DC4FA007B945C /* SecondViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4C99928F252EA32400D1C09F /* Beans */ = {
+			isa = PBXGroup;
+			children = (
+				4C1B3AB8252D62EB001E2ADC /* GithubUser.h */,
+				4C1B3AB9252D62EB001E2ADC /* GithubUser.m */,
+			);
+			path = Beans;
+			sourceTree = "<group>";
+		};
 		4CD786C1252C5F64007011E3 = {
 			isa = PBXGroup;
 			children = (
@@ -122,22 +143,17 @@
 		4CD786CC252C5F64007011E3 /* Github List */ = {
 			isa = PBXGroup;
 			children = (
+				4C99928F252EA32400D1C09F /* Beans */,
+				4C99928E252EA2D700D1C09F /* ViewControllers */,
 				4C1B3ABC252DABDA001E2ADC /* GithubUserCell */,
 				4CD786CD252C5F64007011E3 /* AppDelegate.h */,
 				4CD786CE252C5F64007011E3 /* AppDelegate.m */,
 				4CD786D0252C5F64007011E3 /* SceneDelegate.h */,
 				4CD786D1252C5F64007011E3 /* SceneDelegate.m */,
-				4CD786D3252C5F64007011E3 /* ViewController.h */,
-				4CD786D4252C5F64007011E3 /* ViewController.m */,
-				4CD786D6252C5F64007011E3 /* Main.storyboard */,
 				4CD786D9252C5F65007011E3 /* Assets.xcassets */,
 				4CD786DB252C5F65007011E3 /* LaunchScreen.storyboard */,
 				4CD786DE252C5F65007011E3 /* Info.plist */,
 				4CD786DF252C5F65007011E3 /* main.m */,
-				4C1B3AB8252D62EB001E2ADC /* GithubUser.h */,
-				4C1B3AB9252D62EB001E2ADC /* GithubUser.m */,
-				4C7282CF252DC4FA007B945C /* SecondViewController.h */,
-				4C7282D0252DC4FA007B945C /* SecondViewController.m */,
 			);
 			path = "Github List";
 			sourceTree = "<group>";
