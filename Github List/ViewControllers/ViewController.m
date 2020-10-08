@@ -67,15 +67,15 @@ NSMutableArray<GithubUser *> *githubUsers;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    NSNumber *aaaa = [NSNumber numberWithInteger:indexPath.row];
-    [self performSegueWithIdentifier:@"GotoNextPage" sender:aaaa];
+    NSString *login = githubUsers[indexPath.row].login;
+    [self performSegueWithIdentifier:@"GotoNextPage" sender:login];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"GotoNextPage"]) {
-        NSLog(@"Ready to show data from row %@", sender);
+        NSLog(@"Prepare to show %@'s data.", sender);
         SecondViewController *secondVC = (SecondViewController *)segue.destinationViewController;
-        
+        secondVC.login = sender;
     }
 }
 
