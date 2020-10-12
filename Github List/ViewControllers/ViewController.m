@@ -61,8 +61,16 @@ NSMutableArray<GithubUser *> *githubUsers;
         cell = [[GithubUserCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     cell.label.text = [githubUsers objectAtIndex:indexPath.row].login;
-    NSData *image = [NSData dataWithContentsOfURL:[githubUsers objectAtIndex:indexPath.row].avatarUrl];
-    cell.imageView.image = [UIImage imageWithData:image];
+    // Download and show image.
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+    dispatch_async(queue, ^{
+        // Download image in background thread.
+        NSData *image = [NSData dataWithContentsOfURL:[githubUsers objectAtIndex:indexPath.row].avatarUrl];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Load Image in main thread.
+            cell.imageView.image = [UIImage imageWithData:image];
+        });
+    });
     return cell;
 }
 

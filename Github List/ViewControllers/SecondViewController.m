@@ -27,7 +27,6 @@
         if (jsonError) {
             NSLog(@"Failed to serialize into JSON; %@", jsonError);
         } else {
-            // TODO: Show data.
             GithubUser *githubuser = GithubUser.new;
             githubuser.id = currentUser[@"id"];
             githubuser.login = currentUser[@"login"];

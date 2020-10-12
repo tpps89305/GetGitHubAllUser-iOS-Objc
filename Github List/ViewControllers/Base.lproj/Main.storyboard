@@ -29,8 +29,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VtW-Hq-7Ib">
-                                            <rect key="frame" x="16" y="15" width="64" height="64"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timelapse" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VtW-Hq-7Ib">
+                                            <rect key="frame" x="16" y="14.5" width="64" height="65"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="64" id="CBe-XR-6II"/>
                                                 <constraint firstAttribute="width" constant="64" id="gox-9y-Hov"/>
@@ -39,10 +39,11 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="VtW-Hq-7Ib" firstAttribute="centerY" secondItem="aAj-9b-c8y" secondAttribute="centerY" id="2TD-eh-C85"/>
-                                        <constraint firstItem="6ZQ-8L-c6J" firstAttribute="top" secondItem="aAj-9b-c8y" secondAttribute="topMargin" constant="26" id="Q3J-lx-tbA"/>
                                         <constraint firstItem="VtW-Hq-7Ib" firstAttribute="leading" secondItem="aAj-9b-c8y" secondAttribute="leadingMargin" id="TDg-8O-ONX"/>
                                         <constraint firstItem="6ZQ-8L-c6J" firstAttribute="centerY" secondItem="VtW-Hq-7Ib" secondAttribute="centerY" id="U1r-K6-lvL"/>
-                                        <constraint firstItem="6ZQ-8L-c6J" firstAttribute="leading" secondItem="VtW-Hq-7Ib" secondAttribute="trailing" constant="8" id="hXG-ej-4Vj"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="VtW-Hq-7Ib" secondAttribute="bottom" constant="4" id="UXo-fB-n4H"/>
+                                        <constraint firstItem="6ZQ-8L-c6J" firstAttribute="leading" secondItem="VtW-Hq-7Ib" secondAttribute="trailing" constant="8" id="eZq-8E-IDB"/>
+                                        <constraint firstItem="VtW-Hq-7Ib" firstAttribute="top" secondItem="aAj-9b-c8y" secondAttribute="topMargin" constant="4" id="rHr-r4-ZUo"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -73,8 +74,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2P8-FA-hJb">
-                                <rect key="frame" x="123.5" y="76" width="128" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timelapse" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2P8-FA-hJb">
+                                <rect key="frame" x="123.5" y="75.5" width="128" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="02H-Ad-80b"/>
                                     <constraint firstAttribute="height" constant="128" id="7DJ-pl-wXi"/>
@@ -197,5 +198,6 @@
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="timelapse" catalog="system" width="128" height="122"/>
     </resources>
 </document>
