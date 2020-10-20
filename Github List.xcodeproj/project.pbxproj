@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C1B3ABA252D62EB001E2ADC /* GithubUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B3AB9252D62EB001E2ADC /* GithubUser.m */; };
 		4C1B3ABF252DAC0A001E2ADC /* GithubUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B3ABE252DAC0A001E2ADC /* GithubUserCell.m */; };
+		4C6A44ED253E7BF300BA79E2 /* GithubAPIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6A44EC253E7BF300BA79E2 /* GithubAPIHandler.m */; };
 		4C7282D1252DC4FA007B945C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7282D0252DC4FA007B945C /* SecondViewController.m */; };
 		4CD786CF252C5F64007011E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD786CE252C5F64007011E3 /* AppDelegate.m */; };
 		4CD786D2252C5F64007011E3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD786D1252C5F64007011E3 /* SceneDelegate.m */; };
@@ -43,8 +44,11 @@
 		4C1B3AB9252D62EB001E2ADC /* GithubUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GithubUser.m; sourceTree = "<group>"; };
 		4C1B3ABD252DAC0A001E2ADC /* GithubUserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GithubUserCell.h; sourceTree = "<group>"; };
 		4C1B3ABE252DAC0A001E2ADC /* GithubUserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GithubUserCell.m; sourceTree = "<group>"; };
+		4C6A44EB253E7BF300BA79E2 /* GithubAPIHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GithubAPIHandler.h; sourceTree = "<group>"; };
+		4C6A44EC253E7BF300BA79E2 /* GithubAPIHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GithubAPIHandler.m; sourceTree = "<group>"; };
 		4C7282CF252DC4FA007B945C /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		4C7282D0252DC4FA007B945C /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		4CC7301B2539356C008E3F5C /* Github List.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Github List.entitlements"; sourceTree = "<group>"; };
 		4CD786CA252C5F64007011E3 /* Github List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD786CD252C5F64007011E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4CD786CE252C5F64007011E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -99,6 +103,15 @@
 			path = GithubUserCell;
 			sourceTree = "<group>";
 		};
+		4C6A44EA253E7B7800BA79E2 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				4C6A44EB253E7BF300BA79E2 /* GithubAPIHandler.h */,
+				4C6A44EC253E7BF300BA79E2 /* GithubAPIHandler.m */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
 		4C99928E252EA2D700D1C09F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +156,8 @@
 		4CD786CC252C5F64007011E3 /* Github List */ = {
 			isa = PBXGroup;
 			children = (
+				4C6A44EA253E7B7800BA79E2 /* Functions */,
+				4CC7301B2539356C008E3F5C /* Github List.entitlements */,
 				4C99928F252EA32400D1C09F /* Beans */,
 				4C99928E252EA2D700D1C09F /* ViewControllers */,
 				4C1B3ABC252DABDA001E2ADC /* GithubUserCell */,
@@ -306,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C6A44ED253E7BF300BA79E2 /* GithubAPIHandler.m in Sources */,
 				4CD786D5252C5F64007011E3 /* ViewController.m in Sources */,
 				4C1B3ABF252DAC0A001E2ADC /* GithubUserCell.m in Sources */,
 				4CD786CF252C5F64007011E3 /* AppDelegate.m in Sources */,
@@ -481,7 +497,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Github List/Github List.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U22MGLSVFZ;
 				INFOPLIST_FILE = "Github List/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -489,6 +507,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "dispy.play.Github-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -497,7 +516,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Github List/Github List.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U22MGLSVFZ;
 				INFOPLIST_FILE = "Github List/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -505,6 +526,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "dispy.play.Github-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

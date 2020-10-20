@@ -10,6 +10,7 @@
 #import "GithubUser.h"
 #import "GithubUserCell.h"
 #import "SecondViewController.h"
+#import "GithubAPIHandler.h"
 
 @interface ViewController ()
 
@@ -21,31 +22,11 @@ NSMutableArray<GithubUser *> *githubUsers;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Download JSON from Github API
-    NSURL *url = [NSURL URLWithString:@"https://api.github.com/users"];
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionTask *dataTask = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        NSError *jsonError;
-        NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-        if (jsonError) {
-            NSLog(@"Failed to serialize into JSON; %@", jsonError);
-        } else {
-            // Parse JSON to Object
-            githubUsers = NSMutableArray.new;
-            for (NSDictionary *courseDict in json) {
-                GithubUser *githubuser = GithubUser.new;
-                githubuser.id = courseDict[@"id"];
-                githubuser.login = courseDict[@"login"];
-                githubuser.avatarUrl = [NSURL URLWithString:courseDict[@"avatar_url"]];
-                [githubUsers addObject:githubuser];
-            }
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.tableView reloadData];
-            });
-        }
+    GithubAPIHandler *handler = [[GithubAPIHandler alloc] init];
+    [handler getUserData:^(NSMutableArray * block) {
+        githubUsers = block;
+        [self.tableView reloadData];
     }];
-    [dataTask resume];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
