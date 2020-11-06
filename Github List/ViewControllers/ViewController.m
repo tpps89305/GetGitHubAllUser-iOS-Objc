@@ -57,15 +57,12 @@ NSMutableArray<GithubUser *> *githubUsers;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     NSString *login = githubUsers[indexPath.row].login;
-    [self performSegueWithIdentifier:@"GotoNextPage" sender:login];
-}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"GotoNextPage"]) {
-        NSLog(@"Prepare to show %@'s data.", sender);
-        SecondViewController *secondVC = (SecondViewController *)segue.destinationViewController;
-        secondVC.login = sender;
-    }
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:NSBundle.mainBundle];
+    SecondViewController *vcGithubDetail = [storyboard instantiateViewControllerWithIdentifier:@"GithubUserDetail"];
+    vcGithubDetail.login = login;
+    UIAlertController *ac = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleAlert];
+    [ac setValue:vcGithubDetail forKey:@"contentViewController"];
+    [self presentViewController:ac animated:YES completion:nil];
 }
 
 @end
