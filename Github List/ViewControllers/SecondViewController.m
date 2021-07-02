@@ -23,18 +23,18 @@
     [handler getUserDataWithLoginID:_login onSuccess:^(GithubUser * githubuser) {
         if (![githubuser.avatarUrl isEqual:[NSNull null]]) {
             NSData *image = [NSData dataWithContentsOfURL:githubuser.avatarUrl];
-            self->_imageAvator.image = [UIImage imageWithData:image];
+            self.imageAvator.image = [UIImage imageWithData:image];
         }
         if (![githubuser.name isEqual:[NSNull null]])
-            self->_labelName.text = githubuser.name;
+            self.labelName.text = githubuser.name;
         else
-            self->_labelName.text = githubuser.login;
+            self.labelName.text = githubuser.login;
         if (![githubuser.login isEqual:[NSNull null]])
-            self->_labelLogin.text = githubuser.login;
+            self.labelLogin.text = githubuser.login;
         if (![githubuser.location isEqual:[NSNull null]])
-            self->_labelLocation.text = githubuser.location;
+            self.labelLocation.text = githubuser.location;
         if (![githubuser.url isEqual:[NSNull null]])
-            self->_labelUrl.text = githubuser.url;
+            self.labelUrl.text = githubuser.url;
     }];
 }
 
